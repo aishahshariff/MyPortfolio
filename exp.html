@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="portfoliostyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/fe3a032c34.js" crossorigin="anonymous"></script>
+  <title>Portfolio</title>
+  </head>
+<body>
+ <div class="sidebar">
+    <div class="nav-links">
+      <a href="#" class="nav-link" style="background-color: #0a377b;color: #fff;">EXPERIENCE</a>
+      <a href="file:///C:/Users/Admin/VSCodeProjects/work.html" class="nav-link">MY WORK</a>
+      <a href="file:///C:/Users/Admin/VSCodeProjects/skills.html" class="nav-link">SKILLS</a>
+      <a href="file:///C:/Users/Admin/VSCodeProjects/portfolio.html" class="nav-link">HOME</a>
+      
+    </div>
+    <div class="sidebar-icons">
+     <i class="fa-brands fa-linkedin"></i>
+      <i class="fa-brands fa-github"></i>
+      <i class="fas fa-phone"></i>
+    </div>
+  </div>
+  <div class='halfwidth'>
+    <div class="main-content" style="padding-left: 40px;padding-right: 0;padding-top: 40px;padding-bottom: 40px;">
+      <h1 style="font-weight: bolder;color: white;font-size: xx-large;">Professional Experience </h1> 
+  <div class="timeline" style="padding-top: 36%;">
+    <div class="event" onclick="toggleBox(this)">
+    <time>2019</time>
+    <p>Freelance</p>
+    <div class="info-box">Built a polished Android application in Java and Kotlin featuring seamless Firebase integration for user authentication and backend services.</div>
+  </div>
+  <div class="event" onclick="toggleBox(this)">
+    <time>2021-2022</time>
+    <p>Appsys</p>
+    <div class="info-box">
+        <ul>
+            <li>Designed engaging user interfaces that boosted customer engagement</li>
+            <li>Developed comprehensive documentation outlining app functionalities</li>
+        </ul>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="main" id="main" style="padding-left: 0;padding-right: 40px;padding-top: 20px;padding-bottom: 40px;">
+    <div class="timeline1" style="padding-top: 52%;">
+<div class="event1" onclick="toggleBox(this)">
+    <time>2022-2023</time>
+    <p>Hiray Softech</p>
+    <div class="info-box" style="color: black;background: rgba(255, 255, 255, 0.404);">
+        <ul>
+            <li>Integrated third-party libraries and implemented best Flutter practices</li>
+            <li>Involved in documenting UI designs to determine the best possible widgets.</li>
+        </ul>
+    </div>
+  </div>
+  <div class="event1" onclick="toggleBox(this)">
+    <time>2023-2024</time>
+    <p>Rehz Technologies</p>
+    <div class="info-box" style="color: black;background: rgba(255, 255, 255, 0.404);">
+        <ul>
+            <li>Worked on a web application .</li>
+            <li>Worked on a mobile application that helps users to order milk daily.</li>
+        </ul>
+    </div>
+  </div>
+    </div>  
+  </div>
+
+  <script>
+  function toggleBox(eventDiv) {
+    const box = eventDiv.querySelector('.info-box');
+    if (!box) return;
+
+    // Toggle visibility
+    box.style.display = box.style.display === 'block' ? 'none' : 'block';
+  }
+  document.querySelectorAll('.info-box').forEach(b => {
+  if (b !== box) b.style.display = 'none';
+});
+</script>
+
+</body>
+</html>

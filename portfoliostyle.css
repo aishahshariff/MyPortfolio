@@ -1,0 +1,586 @@
+ @media (min-width: 1024px) {
+    /* Styles for devices with a width of 1200px or greater (e.g., desktops) */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+ body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      padding: 0;
+     
+      display: flex;
+      min-height: 100vh;
+      overflow: auto;
+   }
+
+    /* Sidebar styling */
+    .sidebar {
+      width: 80px;
+      background-color:  #f1cd02; /* yellow tone */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    .nav-links {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      font-weight: bold;
+    }
+.nav-link {
+  width: 80px;
+  display: block;
+  padding: 14px 8px;
+  color: #000;
+  text-decoration: none;
+  transition: background-color 0.3s,color 0.3s;
+  align-content: center;
+}
+
+.nav-link.active {
+  background-color: #0a377b;  /* your highlight color */
+  color: #fff;
+}
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #333;
+    }
+
+    .sidebar-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 20px;
+      color: #000;
+    }
+
+    .sidebar-icons a {
+      text-decoration: none;
+      color: #000;
+      align-content: flex-end;
+    }
+
+    .main-content {
+      margin-left: 80px;
+      padding: 40px;
+      background-color: #0a377b;
+      min-height: 130vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .main {
+      padding: 40px;
+      background-color: #f1cd02;
+      width: calc(100% - 160px);
+      
+    }
+    .halfwidth {
+    width: 100%;
+    background-color: #e0e0e0;
+    min-height: 100vh;
+    overflow: auto;
+}
+.outline-text {
+    color: white;
+    text-shadow:
+      -2px -2px 0 black,
+       2px -2px 0 black,
+      -2px  2px 0 black,
+       2px  2px 0 black;
+  }
+  @supports (-webkit-text-stroke: 1px white) {
+    .outline-text {
+      font-weight: bolder;
+      color: transparent;
+      -webkit-text-stroke: 1px white;
+      -webkit-text-fill-color: transparent;
+      text-shadow: none;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.404);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+button {
+    padding: 10px 20px;
+    background-color: #0a377b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+button:hover {
+    font-weight: bolder;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #000;
+}
+  .btn {
+    background-color: #f1cd02;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    bottom: 20px;      /* 20px from the bottom */
+      left: 80px;
+  }
+ .skills-row {
+  display: flex;
+  gap: 20px;
+  padding: 32px;
+  flex-wrap: wrap;
+}
+/* Individual boxes */
+.info1-box {
+  flex: 1 1 200px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 180px;  /* allows flex shrink */
+}
+.info2-box {
+  flex: 1 1 200px;
+  background: rgba(255, 255, 255, 0.404);
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 180px;  /* allows flex shrink */
+}
+/* Row for icon + title */
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.skill1-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+/* Icon styling */
+.skill-row i {
+  font-size: 1.5em;
+  color:#f1cd02;
+}
+.skill1-row i {
+  font-size: 1.5em;
+  color:#0a377b;
+}
+/* Skill title */
+.skill-row p {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+.skill1-row p {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+/* Skill list */
+.info1-box ul {
+  list-style: disc inside;
+}
+
+.info1-box li {
+  margin-bottom: 6px;
+  padding-left: 16px;
+  color: white;
+}
+.info2-box ul {
+  list-style: disc inside;
+}
+
+.info2-box li {
+  margin-bottom: 6px;
+  padding-left: 16px;
+  color: black;
+}
+/* Responsive breakpoint */
+@media (max-width: 600px) {
+  .skills-row {
+    flex-direction: column;
+  }
+}
+  .row {
+  display: flex;
+  gap: 10px;
+}
+.box {
+  flex: 1;
+  padding: 20px;
+  background: lightblue;
+  text-align: center;
+}
+.ul{
+  color: white;
+  list-style-type: circle;
+}
+
+.timeline {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  position: relative;
+  overflow: visible;
+}
+.timeline ul,
+.timeline li {
+  list-style: square;
+  margin: 0;
+  padding: 0;
+}
+/* The horizontal timeline line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 88%;
+  left: 10%;
+  right: 0;
+  height: 4px;
+  background-color: #f1cd02; /* your yellow */
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.event {
+  position: relative;
+  flex: 1;
+  margin: 0 60px;
+  text-align: center;
+}
+
+/* The circle marker */
+.event::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border: 4px solid #0b307f; /* your blue */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.event time {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.event p {
+  margin: 0;
+  color: white;
+  transition: font-weight 0.3s, background-color 0.3s;
+  padding: 4px 6px;
+  display: inline-block;
+  border-radius: 4px;
+}
+.event p:hover {
+  color: white;
+  font-weight: bolder;
+  background-color: rgba(255, 255, 255, 0.2); /* translucent white box */
+}
+.timeline1 {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  position: relative;
+  align-content: center;
+  overflow: visible;
+}
+.timeline1 ul,
+.timeline1 li {
+  list-style: square;
+  margin: 0;
+  padding: 0;
+}
+/* The horizontal timeline line */
+.timeline1::before {
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right:20%;
+  height: 4px;
+  background-color: #0b307f; /* your yellow */
+  transform: translateY(-40%);
+  z-index: 1;
+}
+
+.event1 {
+  position: relative;
+  flex: 1;
+  margin: 0 60px;
+  text-align: center;
+}
+
+/* The circle marker */
+.event1::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border: 4px solid #f1cd02; /* your blue */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.event1 time {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.event1 p {
+  margin: 0;
+  color: black;
+  transition: font-weight 0.3s, background-color 0.3s;
+  padding: 4px 6px;
+  display: inline-block;
+  border-radius: 4px;
+}
+.event1 p:hover {
+  color: black;
+  font-weight: bolder;
+  background-color: rgba(255, 255, 255, 0.404); /* translucent white box */
+}
+
+.info-box {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;                      /* FIXED width */
+  max-width: 90vw;                   /* Prevent overflow on small screens */
+  box-sizing: border-box;            /* Include padding/border in width */
+  padding: 11%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  border-radius: 4px;
+  white-space: normal;
+  z-index: 5;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 0 16px;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 4px;
+}
+
+.gallery-item img {
+  width: 30vw;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+.caption {
+  margin-top: 12px;
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+}
+/* ================= DESKTOP ================= */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .sidebar {
+    width: 60px;
+    padding: 10px 0;
+  }
+
+  .nav-links {
+    gap: 20px;
+    font-size: 12px;
+  }
+
+  .nav-link {
+    width: 60px;
+    padding: 10px 5px;
+  }
+
+  .main-content {
+    margin-left: 60px;
+    padding: 20px;
+  }
+
+  .main {
+    padding: 20px;
+    width: calc(100% - 120px);
+  }
+
+  .skills-row {
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .gallery-item img {
+    width: 45vw;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .nav-links {
+    writing-mode: horizontal-tb;
+    transform: none;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .nav-link {
+    width: auto;
+    padding: 8px 10px;
+  }
+
+  .sidebar-icons {
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px 10px;
+  }
+
+  .main {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .skills-row {
+    flex-direction: column;
+    padding: 16px 8px;
+  }
+
+  .info1-box,
+  .info2-box {
+    min-width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .timeline::before,
+  .timeline1::before {
+    top: 95%;
+    left: 0;
+    right: 0;
+  }
+
+  .event,
+  .event1 {
+    margin: 0 20px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .gallery-item img {
+    width: 90vw;
+  }
+
+  .form {
+    width: 90%;
+    padding: 10px;
+  }
+
+  input, textarea {
+    font-size: 0.9rem;
+  }
+
+  .btn,
+  button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="portfoliostyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/fe3a032c34.js" crossorigin="anonymous"></script>
+  <title>Portfolio</title>
+  </head>
+<body>
+ <div class="sidebar">
+    <div class="nav-links">
+      <a href="file:///C:/Users/Admin/VSCodeProjects/exp.html" class="nav-link">EXPERIENCE</a>
+      <a href="file:///C:/Users/Admin/VSCodeProjects/work.html" class="nav-link">MY WORK</a>
+      <a href="file:///C:/Users/Admin/VSCodeProjects/skills.html" class="nav-link">SKILLS</a>
+      <a href="#" class="nav-link" style="background-color: #0a377b;color: #fff;">HOME</a>
+    </div>
+    <div class="sidebar-icons">
+     <i class="fa-brands fa-linkedin"></i>
+      <i class="fa-brands fa-github"></i>
+      <i class="fas fa-phone"></i>
+    </div>
+  </div>
+  <div class='halfwidth'>
+    <div class="main-content">
+      <h1 class="outline-text" style="margin-bottom: 0;">Hi there,I`m</h1>
+      <h1 style="font-weight: bolder;color: white;font-size: 50px;margin-top: 0;margin-bottom: 0;">Aishah Shariff</h1>
+      <h1 class="outline-text" style="margin-top: 0;">Front End Developer</h1>
+      <p style="color: white;">I am an innovative Developer with expertise in cross-platform mobile and web application development.<br>
+        Passionate about creating intuitive UI/UX and optimizing app performance to deliver seamless user experiences.</p>
+    <button class="btn" style="align-content: flex-end;margin-top: 40%;" id="reach-btn">Reach Out To Me</button>
+      </div>
+    
+  </div>
+  <div class="main" id="main">
+  </div>
+  <template id="contact-template">
+    <h1>You can reach me at</h1>
+    <div class="row">
+      <i class="fa-brands fa-linkedin" style="font-size: 20px;align-content: center;"></i>
+      <p>https://www.linkedin.com/in/aishah-shariff-a2ab92254/</p>
+    </div>
+    <div class="row">
+      <i class="fa-brands fa-github" style="font-size: 20px;align-content: center;"></i>
+      <p>https://github.com/aishahshariff</p>
+    </div>
+    <div class="row">
+      <i class="fas fa-phone" style="font-size: 20px;align-content: center;"></i>
+      <p>8123617826</p>
+    </div>
+    <form action="submit_form.php" method="post">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required style="background-color: rgba(255, 255, 255, 0.404);">
+    
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required style="background-color: rgba(255, 255, 255, 0.404);">
+    
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" rows="4" required style="background-color: rgba(255, 255, 255, 0.404);"></textarea>
+    
+    <button type="submit">Submit</button>
+</form>
+  </template>
+  <script>
+  const main = document.getElementById('main');
+  const reachBtn = document.getElementById('reach-btn');
+  const contactTpl = document.getElementById('contact-template');
+
+  reachBtn.addEventListener('click', () => {
+    // Replace main area with contact form
+    main.innerHTML = contactTpl.innerHTML;
+  });
+  const navLinks = document.querySelectorAll('.nav-link');
+
+     navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(n => n.classList.remove('active'));
+      link.classList.add('active');
+      localStorage.setItem('activeNav', link.id);
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const activeId = localStorage.getItem('activeNav');
+    if (activeId) document.getElementById(activeId)?.classList.add('active');
+  });
+</script>
+
+</body>
+</html>
